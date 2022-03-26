@@ -2,10 +2,10 @@ import React from "react";
 import { useLocalStorage } from './useLocalStorage'
 
 const TodoContext = React.createContext();
-
+const cantidad = 0;
 function TodoProvider(props){
 
-    const num = 0;
+    const numerosTodosListadas = [];
 
     const {
         item: todos,
@@ -33,14 +33,17 @@ function TodoProvider(props){
             return todoText.includes(searchText);
         })
     }
-    // Esta funcion se usa para que cuando el usuario le de click, se cambie la imagen del estado (completada o no)
+    // Esta funcion se usa para que se agreguen los nuevos todos a la lista que ya esta creada de todos
     const addTodo = (text) => {
         const newTodos = [...todos];
         newTodos.push({
             completed: false,
             text,
+            id: numberOfId(newTodos), //Aca le damos el valor del id
         })
         saveTodos(newTodos);
+
+        // console.log('Este es el ultimo id que se metio en el arryr->'+funcionNumerosId(newTodos))
     }
 
     // Esta funcion se usa para que cuando el usuario le de click, se cambie la imagen del estado (completada o no)
@@ -63,17 +66,24 @@ function TodoProvider(props){
         saveTodos(newTodos);
     }
 
-    const indexTodo = (text) => {
-        const todoIndex = todos.findIndex(todo => todo.text === text) +1;
-        return todoIndex;
+    // Esta funcion se usa para darle id a cada TODO que se va agregando
+    const numberOfId = (array) => {
+        if(array.length === 0){
+            return 1;
+        }else{
+            const numSigId = (array[array.length-1].id + 1);
+            return numSigId;
+        }
     }
 
-    // const forLoop = (int) => {
-    //     for (let step = int; step < int+1; step++) {
-    //         return step;
-    //     }
-    // }
-
+    // Funcion para mostrar el numero de la tarea que esta en pantalla
+    const numberOfTask = (id) => {
+        for (let i = 0; i < todos.length; i++) {
+            if (todos[i].id === id){
+                return i+1;
+            }
+        }
+    }
 
     return (
         <TodoContext.Provider value={{
@@ -89,8 +99,8 @@ function TodoProvider(props){
             deleteTodo,
             openModal,
             setOpenModal,
-            indexTodo,
-            num,
+            numberOfTask,
+            // num,
         }}>
             {props.children}
         </TodoContext.Provider>
