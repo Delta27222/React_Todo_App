@@ -51,9 +51,7 @@ function TodoForm(){
                         Cancel
                     </button>
                     <button
-                        className="submitBtn"
                         type="submit"
-
                     >
                         Create
                         </button>
