@@ -65,12 +65,13 @@
 }
 
 /* DESDE HASTA */
-@media (min-width : 1024PX) and (max-width: 1600PX){
+@media (min-width : 1024PX) {
     .TodoSearch::placeholder{
         font-size: 27px;
         font-weight: 500;
     }
     .TodoSearch{
         height: 55px;
+        width: 1000px;
     }
 }
