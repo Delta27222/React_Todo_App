@@ -11,6 +11,8 @@
     -webkit-box-shadow: -1px -1px 33px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px -1px 33px -6px rgba(0,0,0,0.75);
     box-shadow: -1px -1px 33px -6px rgba(0,0,0,0.75);
+
+    width: 80%;
 }
 .TodoItem-p {
     margin: 4px 0 0 0;
@@ -64,9 +66,8 @@
 }
 
 
-@media (min-width : 270px) and (max-width: 374px){
+@media (min-width : 300px) and (max-width: 374px){
     .TodoItem {
-        width: 230%;
         height: 45px;
     }
     .TodoItem-p{
@@ -89,7 +90,6 @@
 
 @media (min-width : 375PX) and (max-width: 424px){
     .TodoItem {
-        width: 260%;
         height: 45px;
     }
     .TodoItem-p{
@@ -114,7 +114,6 @@
 }
 @media (min-width : 425PX) and (max-width: 550px){
     .TodoItem {
-        width: 290%;
         height: 50px;
     }
     .TodoItem-p{
@@ -138,9 +137,8 @@
     }
 }
 
-@media (min-width : 551PX) and (max-width: 768px){
+@media (min-width : 550PX) and (max-width: 768px){
     .TodoItem {
-        width: 410%;
         height: 50px;
     }
     .TodoItem-p{
@@ -166,7 +164,6 @@
 /* d */
 @media (min-width: 769px) and (max-width: 820px){
     .TodoItem {
-        width: 410%;
         height: 65px;
     }
     .TodoItem-p{
@@ -191,9 +188,7 @@
 }
 @media (min-width: 820px) {
     .TodoItem {
-        width: 510%;
         height: 75px;
-
     }
     .TodoItem-p{
         font-size: 24px;

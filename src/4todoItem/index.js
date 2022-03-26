@@ -9,7 +9,8 @@ const path1 = 'https://img.icons8.com/external-febrian-hidayat-outline-color-feb
 const path2 = 'https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/000000/external-setting-essentials-pack-tanah-basah-glyph-tanah-basah.png'
 
 function TodoItem(props) {
-  const {indexTodo,totalTodos} = React.useContext(TodoContext)
+
+  const {numberOfTask} = React.useContext(TodoContext)
 
   return (
     <li className="TodoItem">
@@ -20,7 +21,7 @@ function TodoItem(props) {
       />
 
       <div className='container_Todo_Name'>
-        <p className='TodoItem-p1'>Task {indexTodo(props.text)}</p>
+        <p className='TodoItem-p1'>Task {numberOfTask(props.id)}</p>
         <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
           {props.text}
         </p>
