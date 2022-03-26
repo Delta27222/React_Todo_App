@@ -42,18 +42,17 @@
     bottom: 10px;
 }
 
-@media (max-width : 375px) {
+@media (min-width : 320px) and (max-width: 375px){
     .container_error2{
-        width: 95%;
+        width: 45%;
+        height: 50px;
     }
     .tittle2{
-        font-size: 15px;
+        font-size: 10px;
     }
     .img2{
-        width: 60px;
+        width: 30px;
     }
-}
-@media (min-width : 320px) and (max-width: 375px){
     .container_create2{
         position: fixed;
         bottom: 102px;
@@ -71,6 +70,16 @@
     }
 }
 @media (min-width : 375px) and (max-width: 425px){
+    .container_error2{
+        width: 50%;
+        height: 100px;
+    }
+    .tittle2{
+        font-size: 15px;
+    }
+    .img2{
+        width: 40px;
+    }
     .container_create2{
         position: fixed;
         bottom: 102px;
@@ -88,6 +97,17 @@
     }
 }
 @media (min-width : 425px) and (max-width: 768px){
+    .container_error2{
+        width: 60%;
+        height: 150px;
+    }
+    .tittle2{
+        font-size: 20px;
+    }
+    .img2{
+        width: 60px;
+    }
+
     .container_create2{
         position: fixed;
         bottom: 102px;
@@ -106,6 +126,17 @@
 }
 
 @media (min-width : 768px) and (max-width: 1024px){
+    .container_error2{
+        width: 80%;
+        height: 200px;
+    }
+    .tittle2{
+        font-size: 25px;
+    }
+    .img2{
+        width: 80px;
+    }
+
     .container_create2{
         position: fixed;
         bottom: 102px;
@@ -124,6 +155,17 @@
 }
 
 @media (min-width : 1024px) and (max-width: 1600px){
+    .container_error2{
+        width: 100%;
+        height: 250px;
+    }
+    .tittle2{
+        font-size: 30px;
+    }
+    .img2{
+        width: 100px;
+    }
+
     .container_create2{
         position: fixed;
         bottom: 95px;

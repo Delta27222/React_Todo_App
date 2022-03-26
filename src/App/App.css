@@ -86,35 +86,66 @@
 }
 
 @media (min-width : 300px) and (max-width: 375px){
+  .container_problems{
+    width: 300px;
+    position: relative;
+    top: 10px;
+  }
   .container_TodoList{
     width: 300px;
   }
+  
 }
 
 @media (min-width : 375PX) and (max-width: 424px){
+  .container_problems{
+    width: 375px;
+    position: relative;
+    top: 10px;
+  }
   .container_TodoList{
     width: 375px;
   }
 }
 
 @media (min-width : 425PX) and (max-width: 550px){
+  .container_problems{
+    width: 425px;
+    position: relative;
+    top: 10px;
+  }
   .container_TodoList{
     width: 425px;
   }
 }
 
 @media (min-width : 550PX) and (max-width: 768px){
+  .container_problems{
+    width: 550px;
+    position: relative;
+    top: 10px;
+  }
   .container_TodoList{
     width: 550px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 820px){
+  .container_problems{
+    width: 769px;
+    position: relative;
+    top: 10px;
+  }
   .container_TodoList{
     width: 769px;
   }
 }
 @media (min-width: 820px) {
+  .container_problems{
+    width: 820px;
+    position: relative;
+    top: 10px;
+  }
   .container_TodoList{
     width: 820px;
   }
