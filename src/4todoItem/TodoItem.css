@@ -163,6 +163,7 @@
         left: 10%;
     }
 }
+/* d */
 @media (min-width: 769px) and (max-width: 820px){
     .TodoItem {
         width: 410%;
