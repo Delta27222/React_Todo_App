@@ -18,7 +18,6 @@ import { NonTodos, CreateNewTodo } from '../8loading skeletons/NonTodos'
 
 
 function AppUI (){
-    const num = 0;
     // Aqui usaremos un nuevo HOOK
     const {
         error,
@@ -63,9 +62,10 @@ function AppUI (){
                     <div className="container_TodoList">
                         {searchedTodos.map(todo => (
                                 <TodoItem
-                                    key={todo.text}
-                                    text={ todo.text }
+                                    key={todo.id}
+                                    text={ todo.text}
                                     completed={todo.completed}
+                                    id={todo.id}
                                     onComplete={() => completeTodo(todo.text, todo.completed)}
                                     onDelete={() => deleteTodo(todo.text)}
                                 />
