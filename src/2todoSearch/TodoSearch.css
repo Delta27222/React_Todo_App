@@ -1,0 +1,76 @@
+.TodoSearch{
+    background-color: #070707;
+    border-radius: 5px;
+    border: 2px solid #e7c100;
+    margin: 0 24px;
+    height: 50px;
+    width: calc(100% - 62px);
+    font-size: 18px;
+    text-align: center;
+    color: #e7c100;
+    box-shadow: 0px 5px 25px #8a7605;
+}
+
+.TodoSearch::placeholder{
+    color: #bd9e04;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+
+.TodoSearch:focus{
+    outline-color: #000000;
+}
+
+.TodoSearch{
+    height: 35px;
+    width: 70%;
+}
+
+/* DESDE HASTA */
+@media (min-width : 320px) and (max-width: 374px) {
+    .TodoSearch::placeholder{
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+}
+
+/* DESDE HASTA */
+@media (min-width : 375px) and (max-width: 424px){
+    .TodoSearch::placeholder{
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+}
+
+/* DESDE HASTA */
+@media (min-width : 425px) and (max-width: 767px){
+    .TodoSearch::placeholder{
+        font-size: 21px;
+        font-weight: 500;
+    }
+}
+
+/* DESDE HASTA */
+@media (min-width : 768px) and (max-width: 1023PX){
+    .TodoSearch::placeholder{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .TodoSearch{
+        height: 45px;
+    }
+}
+
+/* DESDE HASTA */
+@media (min-width : 1024PX) and (max-width: 1600PX){
+    .TodoSearch::placeholder{
+        font-size: 27px;
+        font-weight: 500;
+    }
+    .TodoSearch{
+        height: 55px;
+    }
+}

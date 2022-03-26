@@ -1,0 +1,29 @@
+ul{
+    margin: 0;
+    padding: 0 0 25px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DESDE HASTA */
+@media (min-width : 270px) and (max-width: 375px){
+    section{
+        width: 100%;
+    }
+    ul{
+        width: 100%;
+    }
+}
+
+/* @media (min-width : 320px) and (max-width: 1400PX){
+    section{
+        width: 100%;
+    }
+    ul{
+        padding: 0 0 25px 0;
+        width: 100%;
+    }
+} */

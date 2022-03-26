@@ -1,0 +1,142 @@
+.container_error2{
+    background-color: #242526;
+    border-radius: 5px;
+    margin: 30px 10px ;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    padding: 10px;
+
+    -webkit-box-shadow: -1px -1px 33px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -1px 33px 9px rgba(0,0,0,0.75);
+    box-shadow: -1px -1px 33px 9px rgba(0,0,0,0.75);
+}
+
+.tittle2{
+    margin: 10px 0;
+}
+
+.img2{
+    width: 100px;
+}
+
+.container_create2{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: -1;
+}
+.container_create2 > p{
+    margin-right: 10px;
+    font-size: 10px;
+    position: relative;
+    right: -10px;
+}
+.container_create2 > img{
+    transform: rotate(66deg);
+    position: relative;
+    bottom: 10px;
+}
+
+@media (max-width : 375px) {
+    .container_error2{
+        width: 95%;
+    }
+    .tittle2{
+        font-size: 15px;
+    }
+    .img2{
+        width: 60px;
+    }
+}
+@media (min-width : 320px) and (max-width: 375px){
+    .container_create2{
+        position: fixed;
+        bottom: 102px;
+        right: 51px;
+    }
+    .container_create2 > p{
+        font-size: 12px;
+        margin-right: 12px;
+    }
+    .container_create2 > img{
+        transform: rotate(66deg);
+        position: relative;
+        bottom: -10px;
+        right: -8px;
+    }
+}
+@media (min-width : 375px) and (max-width: 425px){
+    .container_create2{
+        position: fixed;
+        bottom: 102px;
+        right: 51px;
+    }
+    .container_create2 > p{
+        font-size: 12px;
+        margin-right: 12px;
+    }
+    .container_create2 > img{
+        transform: rotate(66deg);
+        position: relative;
+        bottom: -10px;
+        right: -8px;
+    }
+}
+@media (min-width : 425px) and (max-width: 768px){
+    .container_create2{
+        position: fixed;
+        bottom: 102px;
+        right: 51px;
+    }
+    .container_create2 > p{
+        font-size: 14px;
+        margin-right: 16px;
+    }
+    .container_create2 > img{
+        transform: rotate(66deg);
+        position: relative;
+        bottom: -10px;
+        right: -8px;
+    }
+}
+
+@media (min-width : 768px) and (max-width: 1024px){
+    .container_create2{
+        position: fixed;
+        bottom: 102px;
+        right: 51px;
+    }
+    .container_create2 > p{
+        font-size: 17px;
+        margin-right: 20px;
+    }
+    .container_create2 > img{
+        transform: rotate(66deg);
+        position: relative;
+        bottom: -10px;
+        right: -8px;
+    }
+}
+
+@media (min-width : 1024px) and (max-width: 1600px){
+    .container_create2{
+        position: fixed;
+        bottom: 95px;
+        right: 66px;
+    }
+    .container_create2 > p{
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    .container_create2 > img{
+        transform: rotate(66deg);
+        position: relative;
+        bottom: -10px;
+        right: -8px;
+    }
+}

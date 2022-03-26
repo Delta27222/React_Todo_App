@@ -1,0 +1,43 @@
+.TodoCounter{
+    text-align: center;
+    margin: 0px 2%;
+    padding: 25px 5px 25px 5px;
+}
+/* desde */
+/* desde hasta */
+@media (min-width : 320px) and (max-width: 374px) {
+    .TodoCounter{
+        font-size: 15px;
+    }
+}
+
+/* DESDE HASTA */
+@media (min-width : 375px) and (max-width: 424px){
+
+    .TodoCounter{
+        font-size: 18px;
+    }
+}
+
+/* DESDE HASTA */
+@media (min-width : 425px) and (max-width: 767px){
+
+    .TodoCounter{
+        font-size: 21px;
+    }
+}
+
+/* DESDE HASTA */
+@media (min-width : 768px) and (max-width: 1023PX){
+
+    .TodoCounter{
+        font-size: 24px;
+    }
+}
+
+/* DESDE HASTA */
+@media (min-width : 1024PX) and (max-width: 1400PX){
+    .TodoCounter{
+        font-size: 27px;
+    }
+}

@@ -1,0 +1,105 @@
+form {
+    width: 90%;
+    max-width: 50%;
+    height: 20%;
+    max-height: 50%;
+    background-color: #18191a;
+    padding: 33px 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+textarea {
+    background-color: #242526;
+    border: 2px solid #e7c100;
+    border-radius: 5px;
+    color: #1E1E1F;
+    font-size: 20px;
+    text-align: center;
+    padding: 12px;
+    height: 96px;
+    width: calc(100%-25px);
+    resize: none;
+    color: #a5a5a5;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #e7c100;
+}
+textarea::placeholder {
+    color: #a5a5a5;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.containerButtonModal{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.containerButtonModal button{
+    display: block;
+    margin: 10px 0px 0px 10px;
+    background-color: #e7c100;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    width: 140px;
+    height: 45px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+/* .message{
+    margin: 5px 0 0 0;
+    font-size: 10px;
+    color: red;
+} */
+@media (max-width : 375px) {
+    form {
+        height: 10%;
+    }
+    textarea {
+        font-size: 12px;
+        padding: 6px;
+        height: 50px;
+        width: 100%;
+        resize: none;
+        color: #a5a5a5;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        color: #e7c100;
+    }
+    .containerButtonModal button:nth-child(1){
+        margin-top: 10px;
+        margin-right: 5px;
+        margin-left: 0px;
+        font-size: 13px;
+        width: 80px;
+        height: 30px;
+    }
+    .containerButtonModal button:nth-child(2){
+        margin-top: 10px;
+        margin-left: 5px;
+        font-size: 13px;
+        width: 80px;
+        height: 30px;
+    }
+    .message{
+    margin: 5px 0 0 0;
+    font-size: 10px;
+    color: red;
+    }
+
+
+}
