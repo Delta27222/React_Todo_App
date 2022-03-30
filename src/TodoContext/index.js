@@ -2,7 +2,7 @@ import React from "react";
 import { useLocalStorage } from './useLocalStorage'
 
 const TodoContext = React.createContext();
-const cantidad = 0;
+// const cantidad = 0;
 function TodoProvider(props){
 
     const numerosTodosListadas = [];

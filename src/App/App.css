@@ -44,12 +44,12 @@
 }
 
 .container_TodoList{
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .container_problems{
   display: flex;
@@ -57,7 +57,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 100px;
+  top: -25px;
 }
 .todoCounterContainer{
   display: flex;
@@ -89,7 +89,7 @@
   .container_problems{
     width: 300px;
     position: relative;
-    top: 10px;
+    /* top: 1px; */
   }
   .container_TodoList{
     width: 300px;
@@ -101,7 +101,7 @@
   .container_problems{
     width: 375px;
     position: relative;
-    top: 10px;
+    /* top: 1px; */
   }
   .container_TodoList{
     width: 375px;
@@ -112,7 +112,7 @@
   .container_problems{
     width: 425px;
     position: relative;
-    top: 10px;
+    /* top: 1px; */
   }
   .container_TodoList{
     width: 425px;
@@ -123,7 +123,7 @@
   .container_problems{
     width: 550px;
     position: relative;
-    top: 10px;
+    /* top: 1px; */
   }
   .container_TodoList{
     width: 550px;
@@ -134,7 +134,7 @@
   .container_problems{
     width: 769px;
     position: relative;
-    top: 10px;
+    /* top: 1px; */
   }
   .container_TodoList{
     width: 769px;
@@ -144,7 +144,7 @@
   .container_problems{
     width: 820px;
     position: relative;
-    top: 10px;
+    /* top: 1px; */
   }
   .container_TodoList{
     width: 820px;

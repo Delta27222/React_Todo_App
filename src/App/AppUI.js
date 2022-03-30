@@ -30,7 +30,7 @@ function AppUI (){
         totalTodos,
     } = React.useContext(TodoContext);
 
-
+    const numLoadingTodos = totalTodos;
     return(
         <React.Fragment>
 
@@ -47,15 +47,21 @@ function AppUI (){
 
                     <div className="container_problems">
 
-                        {loading && <TodosLoading />}
+                    {loading &&
+                        Array(5)
+                        .fill(1)
+                        .map((a, i) => <TodosLoading />)}
 
-                        {!loading && (totalTodos == 0) && <NonTodos/>}
 
-                        {!loading && (totalTodos == 0) &&  <CreateNewTodo/>}
+                        {/* {loading && <TodosLoading />} */}
+
+                        {!loading && (totalTodos === 0) && <NonTodos/>}
+
+                        {!loading && (totalTodos === 0) &&  <CreateNewTodo/>}
 
                         {error && <TodosError error={error} />}
 
-                        {(!loading && !searchedTodos.length && (totalTodos != 0)) && <EmptyTodos/> }
+                        {(!loading && !searchedTodos.length && (totalTodos !== 0)) && <EmptyTodos/> }
                     </div>
 
 
