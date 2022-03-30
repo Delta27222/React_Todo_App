@@ -71,18 +71,7 @@
   justify-content: center;
   align-items: center;
 }
-.container_problems1{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 24px 10px 30px 10px;
-  padding: 10px;
-  width: 80%;
 
-  position: absolute;
-  bottom: 555px;
-}
 /* DESDE HASTA */
 @media (min-width : 320px) and (max-width: 1600PX) {
   .todoCounterContainer,

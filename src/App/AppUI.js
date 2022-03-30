@@ -44,17 +44,14 @@ function AppUI (){
 
             <div className="todoListContainer">
                 <TodoList>
-                    <div className="container_problems1">
 
-                        {!loading && (totalTodos === 0) && <NonTodos/>}
+                    {!loading && (totalTodos === 0) && <NonTodos/>}
 
-                        {!loading && (totalTodos === 0) &&  <CreateNewTodo/>}
+                    {!loading && (totalTodos === 0) &&  <CreateNewTodo/>}
 
-                        {error && <TodosError error={error} />}
+                    {error && <TodosError error={error} />}
 
-                        {(!loading && !searchedTodos.length && (totalTodos !== 0)) && <EmptyTodos/> }
-
-                    </div>
+                    {(!loading && !searchedTodos.length && (totalTodos !== 0)) && <EmptyTodos/> }
 
                     <div className="container_problems">
 
