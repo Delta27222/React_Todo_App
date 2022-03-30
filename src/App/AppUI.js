@@ -44,16 +44,7 @@ function AppUI (){
 
             <div className="todoListContainer">
                 <TodoList>
-
-                    <div className="container_problems">
-
-                    {loading &&
-                        Array(5)
-                        .fill(1)
-                        .map((a, i) => <TodosLoading />)}
-
-
-                        {/* {loading && <TodosLoading />} */}
+                    <div className="container_problems1">
 
                         {!loading && (totalTodos === 0) && <NonTodos/>}
 
@@ -62,6 +53,19 @@ function AppUI (){
                         {error && <TodosError error={error} />}
 
                         {(!loading && !searchedTodos.length && (totalTodos !== 0)) && <EmptyTodos/> }
+
+                    </div>
+
+                    <div className="container_problems">
+
+                        {loading &&
+                            Array(5)
+                            .fill(1)
+                            .map((a, i) => <TodosLoading />)}
+
+
+                        {/* {loading && <TodosLoading />} */}
+
                     </div>
 
 
