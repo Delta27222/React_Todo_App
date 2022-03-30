@@ -28,9 +28,15 @@ function AppUI (){
         openModal,
         setOpenModal,
         totalTodos,
+        todoText,
+        setTodoText,
+        setOpenConfirmDialog,
     } = React.useContext(TodoContext);
 
-    const numLoadingTodos = totalTodos;
+    const [action, setAction] = React.useState("");
+
+    const [id, setId] = React.useState(0);
+
     return(
         <React.Fragment>
 
@@ -55,16 +61,13 @@ function AppUI (){
 
                     <div className="container_problems">
 
-                        {loading &&
-                            Array(5)
-                            .fill(1)
-                            .map((a, i) => <TodosLoading />)}
-
-
-                        {/* {loading && <TodosLoading />} */}
+                    {loading &&
+                        Array(3)
+                        .fill(1)
+                        .map((a, i) => <TodosLoading key={i}/>)
+                    }
 
                     </div>
-
 
                     <div className="container_TodoList">
                         {searchedTodos.map(todo => (
@@ -75,6 +78,10 @@ function AppUI (){
                                     id={todo.id}
                                     onComplete={() => completeTodo(todo.text, todo.completed)}
                                     onDelete={() => deleteTodo(todo.text)}
+                                    setOpenModal={ setOpenModal }
+                                    setAction = { setAction }
+                                    setTodoText = { setTodoText }
+                                    setId = { setId }
                                 />
                         ))}
                     </div>
@@ -82,11 +89,16 @@ function AppUI (){
                 </TodoList>
             </div>
 
-
                 {!!openModal &&(
 
                     <Modal>
-                        <TodoForm />
+                        <TodoForm
+                            action={action}
+                            todoText={todoText}
+                            setTodoText = { setTodoText }
+                            id = { id }
+                            setOpenModal={setOpenModal}
+                        />
                     </Modal>
 
                 )}
@@ -94,6 +106,7 @@ function AppUI (){
 
             <CreateTodoButton
                 setOpenModal={setOpenModal}
+                setAction = { setAction }
             />
 
         </React.Fragment>

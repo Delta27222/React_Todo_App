@@ -2,10 +2,7 @@ import React from "react";
 import { useLocalStorage } from './useLocalStorage'
 
 const TodoContext = React.createContext();
-// const cantidad = 0;
 function TodoProvider(props){
-
-    const numerosTodosListadas = [];
 
     const {
         item: todos,
@@ -17,6 +14,9 @@ function TodoProvider(props){
     const [searchValue, setSearchValue] = React.useState('');
 
     const [openModal, setOpenModal] = React.useState(false);
+
+    const [todoText, setTodoText] = React.useState("");
+
 
     const completedTodos = todos.filter(todo => !!todo.completed).length;
 
@@ -66,6 +66,21 @@ function TodoProvider(props){
         saveTodos(newTodos);
     }
 
+    // Funcion para editar el todo
+    const editTodo = (newText, idTask) => {
+        console.log(newText)
+        for (let i = 0; i < todos.length; i++) {
+            if (todos[i].id === idTask){
+                console.log(todos[i].id)
+                console.log(idTask)
+                const newTodos = [...todos];
+                newTodos[i].text = newText;
+                console.log( newTodos[i].text);
+                saveTodos(newTodos);
+            }
+        }
+    };
+
     // Esta funcion se usa para darle id a cada TODO que se va agregando
     const numberOfId = (array) => {
         if(array.length === 0){
@@ -100,7 +115,9 @@ function TodoProvider(props){
             openModal,
             setOpenModal,
             numberOfTask,
-            // num,
+            todoText,
+            setTodoText,
+            editTodo
         }}>
             {props.children}
         </TodoContext.Provider>

@@ -12,6 +12,13 @@ function TodoItem(props) {
 
   const {numberOfTask} = React.useContext(TodoContext)
 
+  const showModalEdit = (event) => {
+    props.setOpenModal(prevState => !prevState);
+    props.setTodoText(event.target.previousSibling.textContent);
+    props.setAction("editTodo");
+    props.setId(props.id);
+  }
+
   return (
     <li className="TodoItem">
       <img
@@ -22,10 +29,16 @@ function TodoItem(props) {
 
       <div className='container_Todo_Name'>
         <p className='TodoItem-p1'>Task {numberOfTask(props.id)}</p>
-        <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
+        <p   className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
           {props.text}
         </p>
+        <img
+          className='Icon_edit'
+          src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-pencil-home-improvement-flaticons-flat-flat-icons.png"
+          onClick={showModalEdit}
+        />
       </div>
+
 
       <DeleteIcon className="Icon-delete" onClick={props.onDelete}/>
     </li>

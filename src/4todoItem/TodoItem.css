@@ -65,6 +65,19 @@
     fill: #e7c100;
 }
 
+.Icon_edit{
+    position: absolute;
+    cursor: pointer;
+    left: 540px;
+    width: 40px;
+    transform: rotate(225deg);
+}
+.Icon_edit:hover{
+    width: 45px;
+    transform: rotate(225deg);
+}
+
+
 
 @media (min-width : 300px) and (max-width: 374px){
     .TodoItem {

@@ -3,14 +3,23 @@ import { TodoContext } from '../TodoContext'
 import './TodoForm.css'
 
 
-function TodoForm(){
-    const [newTodoValue, setNewTodoValue] = React.useState('');
+function TodoForm(props){
+    // const editando = () =>{
+    //     if(props.action === 'editTodo'){
+    //         return props.text;
+    //     }else{
+    //         return "";
+    //     }
+    // }
+    const [newTodoValue, setNewTodoValue] = React.useState("");
+    // const [newTodoValue, setNewTodoValue] = React.useState(editando());
 
     const [noEmpty, empty] = React.useState(false);
 
     const {
         addTodo,
         setOpenModal,
+        editTodo
     } = React.useContext(TodoContext);
 
     const onchange =(event) => {
@@ -20,7 +29,7 @@ function TodoForm(){
     const onCancel = () => {
         setOpenModal(false);
     }
-    const onSubmit = (event) => {
+    const addNewTodo = (event) => {
         if(!newTodoValue.trim().length){
             event.preventDefault();
             empty(true);
@@ -32,11 +41,23 @@ function TodoForm(){
         }
     }
 
+    const editTodoNow = (event) => {
+        if(!newTodoValue.trim().length){
+            event.preventDefault();
+            empty(true);
+            setOpenModal(true);
+        }else{
+            event.preventDefault();
+            editTodo(newTodoValue, props.id);
+            setOpenModal(false);
+        }
+    }
+
     return(
-        <form onSubmit={ onSubmit } name="form">
+        <form onSubmit={ props.action ===  'editTodo' ? editTodoNow : addNewTodo } name="form">
             <div className="container">
                 <textarea
-                    value={newTodoValue}
+                    defaultValue={props.action == "editTodo" ? props.todoText : ""}
                     onChange={onchange}
                     placeholder="Do Homework, for school."
                     className="textAreaTodo"
@@ -52,8 +73,9 @@ function TodoForm(){
                     </button>
                     <button
                         type="submit"
+                        disabled={!newTodoValue.length}
                     >
-                        Create
+                        {props.action == "editTodo" ? "Save" : "Create"}
                         </button>
                 </div>
             </div>
