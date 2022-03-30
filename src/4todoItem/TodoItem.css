@@ -68,12 +68,6 @@
 .Icon_edit{
     position: absolute;
     cursor: pointer;
-    left: 540px;
-    width: 40px;
-    transform: rotate(225deg);
-}
-.Icon_edit:hover{
-    width: 45px;
     transform: rotate(225deg);
 }
 
@@ -98,6 +92,14 @@
 
         right: 4px;
         bottom: 45px;
+    }
+    .Icon_edit{
+        left: 155px;
+        bottom: 5px;
+        height: 30px;
+    }
+    .Icon_edit:hover {
+        height: 35px;
     }
 }
 
@@ -124,6 +126,14 @@
     .container_Todo_Name{
         left: 15%;
     }
+    .Icon_edit{
+        left: 215px;
+        bottom: 5px;
+        height: 30px;
+    }
+    .Icon_edit:hover {
+        height: 35px;
+    }
 }
 @media (min-width : 425PX) and (max-width: 550px){
     .TodoItem {
@@ -147,6 +157,14 @@
     }
     .container_Todo_Name{
         left: 15%;
+    }
+    .Icon_edit{
+        left: 240px;
+        bottom: 5px;
+        height: 35px;
+    }
+    .Icon_edit:hover {
+        height: 40px;
     }
 }
 
@@ -173,6 +191,14 @@
     .container_Todo_Name{
         left: 10%;
     }
+    .Icon_edit{
+        left: 345px;
+        bottom: 5px;
+        height: 35px;
+    }
+    .Icon_edit:hover {
+        height: 40px;
+    }
 }
 /* d */
 @media (min-width: 769px) and (max-width: 820px){
@@ -198,6 +224,15 @@
     .container_Todo_Name{
         left: 10%;
     }
+    .Icon_edit{
+        left: 500px;
+        bottom: 5px;
+        height: 40px;
+    }
+    .Icon_edit:hover {
+        height: 45px;
+    }
+    
 }
 @media (min-width: 820px) {
     .TodoItem {
@@ -221,6 +256,14 @@
     }
     .container_Todo_Name{
         left: 10%;
+    }
+    .Icon_edit{
+        left: 530px;
+        bottom: 5px;
+        height: 40px;
+    }
+    .Icon_edit:hover {
+        height: 45px;
     }
 }
 

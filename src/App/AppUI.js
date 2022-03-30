@@ -30,7 +30,6 @@ function AppUI (){
         totalTodos,
         todoText,
         setTodoText,
-        setOpenConfirmDialog,
     } = React.useContext(TodoContext);
 
     const [action, setAction] = React.useState("");
