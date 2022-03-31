@@ -4,15 +4,8 @@ import './TodoForm.css'
 
 
 function TodoForm(props){
-    // const editando = () =>{
-    //     if(props.action === 'editTodo'){
-    //         return props.text;
-    //     }else{
-    //         return "";
-    //     }
-    // }
+
     const [newTodoValue, setNewTodoValue] = React.useState("");
-    // const [newTodoValue, setNewTodoValue] = React.useState(editando());
 
     const [noEmpty, empty] = React.useState(false);
 

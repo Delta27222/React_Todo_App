@@ -18,6 +18,11 @@ function TodoItem(props) {
     props.setAction("editTodo");
     props.setId(props.id);
   }
+  const showModalConfirmDelete = (event) => {
+    props.setOpenModal(prevState => !prevState);
+    props.setAction("deleteTodo");
+    props.setTodoText(props.text);
+  }
 
   return (
     <li className="TodoItem">
@@ -40,7 +45,7 @@ function TodoItem(props) {
       </div>
 
 
-      <DeleteIcon className="Icon-delete" onClick={props.onDelete}/>
+      <DeleteIcon className="Icon-delete" onClick={showModalConfirmDelete}/>
     </li>
   );
 }

@@ -6,6 +6,7 @@ import { TodoList } from "../3todoList";
 import { TodoItem } from "../4todoItem";
 import { TodoForm } from "../7todoForm";
 import { CreateTodoButton } from "../5createTodoButton";
+import { AdviceDelete } from "../9AdviceDelete";
 
 // Aca llamamos al componente modal
 import { Modal } from '../6modal'
@@ -76,7 +77,7 @@ function AppUI (){
                                     completed={todo.completed}
                                     id={todo.id}
                                     onComplete={() => completeTodo(todo.text, todo.completed)}
-                                    onDelete={() => deleteTodo(todo.text)}
+                                    onDelete={() => deleteTodo(todo.id)}
                                     setOpenModal={ setOpenModal }
                                     setAction = { setAction }
                                     setTodoText = { setTodoText }
@@ -91,13 +92,23 @@ function AppUI (){
                 {!!openModal &&(
 
                     <Modal>
-                        <TodoForm
-                            action={action}
-                            todoText={todoText}
-                            setTodoText = { setTodoText }
-                            id = { id }
-                            setOpenModal={setOpenModal}
-                        />
+                        { (action === 'createTodo' || action === 'editTodo') &&(
+                            <TodoForm
+                                action={action}
+                                todoText={todoText}
+                                setTodoText = { setTodoText }
+                                id = { id }
+                                setOpenModal={setOpenModal}
+                            />
+                        )}
+                        { action === 'deleteTodo'&& (
+                            <AdviceDelete
+                                todoText = { todoText }
+                                setOpenModal={setOpenModal}
+                                id = { id }
+                            />
+                        )}
+
                     </Modal>
 
                 )}

@@ -58,8 +58,8 @@ function TodoProvider(props){
         saveTodos(newTodos);
     }
     // Esta funcion es para que se eliminen  los tofo que el usuario le de click
-    const deleteTodo = (text) => {
-        const todoIndex = todos.findIndex(todo => todo.text === text);
+    const deleteTodo = (idTask) => {
+        const todoIndex = todos.findIndex(todo => todo.id === idTask);
 
         const newTodos = [...todos];
         newTodos.splice(todoIndex, 1);

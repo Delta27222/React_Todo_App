@@ -1,0 +1,276 @@
+.Form {
+    width: 90%;
+    max-width: 50%;
+    background-color: #18191a;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 0px 40px;
+    height: 250px;
+}
+.circle_icon_trash{
+    background: rgb(32,35,41,.8);
+	border-bottom-left-radius: 50% 100%;
+	border-bottom-right-radius: 50% 100%;
+}
+.icon_trash{
+    fill: #e7c100;
+    transform: scale(5);
+    position: relative;
+    top: -2px;
+    left: 52px;
+}
+.Form .tittle{
+    margin: 0px;
+    position: relative;
+    bottom: 8px;
+    font-size: 25px;
+}
+.Form .task{
+    margin: 10px 0 0 0;
+    font-weight: 100;
+    color: white;
+}
+
+.container_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    position: relative;
+    left: 165px;
+}
+.container_buttons button:nth-child(1){
+    display: block;
+    margin: 10px 0px 0px 10px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    height: 45px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+.container_buttons button:nth-child(2){
+    display: block;
+    margin: 10px 0px 0px 10px;
+    background-color: #e7c100;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    width: 140px;
+    height: 45px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+
+
+@media (min-width : 300px) and (max-width: 375px){
+    .Form {
+        padding: 25px 40px 4px 40px;
+        height: 230px;
+    }
+    .circle_icon_trash{
+        width: 90px;
+        height: 45px;
+        top: -25px;
+    }
+    .icon_trash{
+        fill: #e7c100;
+        transform: scale(3);
+        position: relative;
+        top: -3px;
+        left: 37px;
+    }
+    .Form .tittle{
+        bottom: 8px;
+        font-size: 14px;
+    }
+    .Form .task{
+        font-size: 14px;
+    }
+    .Form p{
+        font-size: 10px;
+        top: 20px;
+    }
+    
+    .container_buttons{
+        left: 19px;
+        top: 27px
+    }
+    .container_buttons button:nth-child(1){
+        color: white;
+        height: 32px;
+    }
+    .container_buttons button:nth-child(2){
+        width: 80px;
+        height: 32px;
+    }
+    
+}
+@media (min-width : 375px) and (max-width: 425px){
+    .Form {
+        padding: 25px 40px 4px 40px;
+        height: 230px;
+    }
+    .circle_icon_trash{
+        width: 100px;
+        height: 50px;
+        position: relative;
+        top: -25px;
+    }
+    .icon_trash{
+        transform: scale(3.5);
+        left: 44px;
+    }
+    .Form .tittle{
+        bottom: 8px;
+        font-size: 15px;
+    }
+    .Form .task{
+        font-size: 15px;
+    }
+    .Form p{
+        font-size: 11px;
+        top: 20px;
+    }
+    
+    .container_buttons{
+        left: 44px;
+        top: 7px;
+    }
+    .container_buttons button:nth-child(1){
+        color: white;
+        height: 32px;
+    }
+    .container_buttons button:nth-child(2){
+        width: 80px;
+        height: 32px;
+    }
+}
+@media (min-width : 425px) and (max-width: 768px){
+    .Form {
+        padding: 25px 40px 4px 40px;
+        height: 230px;
+    }
+    .circle_icon_trash{
+        width: 100px;
+        height: 50px;
+        position: relative;
+        top: -25px;
+    }
+    .icon_trash{
+        transform: scale(3.5);
+        left: 44px;
+    }
+    .Form .tittle{
+        bottom: 8px;
+        font-size: 16px;
+    }
+    .Form .task{
+        font-size: 16px;
+    }
+    .Form p{
+        font-size: 12px;
+        top: 20px;
+    }
+    
+    .container_buttons{
+        left: 52px;
+        top: 7px;
+    }
+    .container_buttons button:nth-child(1){
+        color: white;
+        height: 32px;
+    }
+    .container_buttons button:nth-child(2){
+        width: 80px;
+        height: 32px;
+    }
+}
+
+@media (min-width : 768px) and (max-width: 1024px){
+    .Form {
+        padding: 25px 40px 4px 40px;
+        height: 230px;
+    }
+    .circle_icon_trash{
+        width: 120px;
+        height: 60px;
+        position: relative;
+        top: -25px;
+    }
+    .icon_trash{
+        transform: scale(4);
+        left: 55px;
+    }
+    .Form .tittle{
+        bottom: 8px;
+        font-size: 18px;
+    }
+    .Form .task{
+        font-size: 18px;
+    }
+    .Form p{
+        font-size: 13px;
+        top: 20px;
+    }
+    
+    .container_buttons{
+        left: 130px;
+        top: 14px;
+    }
+    .container_buttons button:nth-child(1){
+        color: white;
+        height: 32px;
+    }
+    .container_buttons button:nth-child(2){
+        width: 80px;
+        height: 32px;
+    }
+}
+
+@media (min-width : 1024px) {
+    .Form {
+        padding: 25px 40px 4px 40px;
+        height: 230px;
+    }
+    .circle_icon_trash{
+        width: 130px;
+        height: 65px;
+        position: relative;
+        top: -25px;
+    }
+    .icon_trash{
+        transform: scale(4.5);
+        left: 60px;
+    }
+    .Form .tittle{
+        bottom: 8px;
+        font-size: 20px;
+    }
+    .Form .task{
+        font-size: 20px;
+    }
+    .Form p{
+        font-size: 15px;
+        top: 20px;
+    }
+    .container_buttons{
+        left: 200px;
+        top: 2px;
+    }
+    .container_buttons button:nth-child(1){
+        color: white;
+        height: 32px;
+    }
+    .container_buttons button:nth-child(2){
+        width: 80px;
+        height: 32px;
+    }
+}
