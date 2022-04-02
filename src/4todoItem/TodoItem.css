@@ -41,8 +41,10 @@
     fill: #e7c100;
 }
 .Icon_edit{
+    cursor: pointer;
     transform: rotate(225deg);
 }
+
 .Icon-delete {
     fill: #B0B3B8;
 }
@@ -63,7 +65,7 @@
     color: #b0b3b8;
     width: 510px;
     text-align: justify;
-    margin: 12px 0px 12px 0px;
+    margin: 12px 5px 12px 0px;
 }
 
 .TodoItem-p1{
@@ -93,14 +95,10 @@
     cursor: pointer;
     fill: #B0B3B8;
     position: sticky;
-    bottom: 702px;
+    bottom: 680px;
 }
 .Icon-delete:hover {
     fill: #e7c100;
-}
-.Icon_edit{
-    cursor: pointer;
-    transform: rotate(225deg);
 }
 
 
@@ -111,6 +109,8 @@
     }
     .TodoItem-p{
         font-size: 18px;
+        width: 123px;
+
     }
     .TodoItem-p1{
         font-size: 14px;
@@ -136,6 +136,7 @@
     }
     .TodoItem-p{
         font-size: 20px;
+        width: 183px;
     }
     .TodoItem-p1{
         font-size: 16px;
@@ -162,6 +163,7 @@
         min-height: 50px;
     }
     .TodoItem-p{
+        width: 206px;
         font-size: 22px;
     }
     .TodoItem-p1{
@@ -190,6 +192,7 @@
         min-height: 50px;
     }
     .TodoItem-p{
+        width: 306px;
         font-size: 22px;
     }
     .TodoItem-p1{
@@ -218,6 +221,7 @@
         min-height: 65px;
     }
     .TodoItem-p{
+        width: 476px;
         font-size: 24px;
     }
     .TodoItem-p1{
@@ -245,6 +249,7 @@
         min-height: 75px;
     }
     .TodoItem-p{
+        width: 517px;
         font-size: 24px;
     }
     .TodoItem-p1{
