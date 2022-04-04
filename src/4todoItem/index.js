@@ -14,7 +14,7 @@ function TodoItem(props) {
 
   const showModalEdit = (event) => {
     props.setOpenModal(prevState => !prevState);
-    props.setTodoText(event.target.previousSibling.textContent);
+    props.setTodoText(props.text);
     props.setAction("editTodo");
     props.setId(props.id);
   }
@@ -26,24 +26,6 @@ function TodoItem(props) {
 
   return (
     <li className="TodoItem grid_container">
-      {/* <img
-        src={`${props.completed ? path1 : path2}`}
-        className={`Icon-check ${props.completed && 'Icon-check--active'}`}
-        onClick={props.onComplete}
-      />
-
-      <div className='container_Todo_Name'>
-        <p className='TodoItem-p1'>Task {numberOfTask(props.id)}</p>
-        <p   className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
-          {props.text}
-        </p>
-      </div>
-
-      <img
-        className='Icon_edit'
-        src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-pencil-home-improvement-flaticons-flat-flat-icons.png"
-        onClick={showModalEdit}
-      /> */}
         <img
           src={`${props.completed ? path1 : path2}`}
           className={`Icon-check ${props.completed && 'Icon-check--active icon'}`}
@@ -51,18 +33,15 @@ function TodoItem(props) {
         />
         <div className='container_Todo_Name'>
           <p className='TodoItem-p1'>Task {numberOfTask(props.id)}</p>
-          <p   className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
+          <p id='text_item' className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
             {props.text}
           </p>
         </div>
-  
         <img
           className='Icon_edit'
           src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-pencil-home-improvement-flaticons-flat-flat-icons.png"
           onClick={showModalEdit}
         />
-
-
       <DeleteIcon className="Icon-delete" onClick={showModalConfirmDelete}/>
     </li>
   );

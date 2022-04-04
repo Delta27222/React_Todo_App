@@ -5,6 +5,7 @@ import './TodoForm.css'
 
 function TodoForm(props){
 
+
     const [newTodoValue, setNewTodoValue] = React.useState("");
 
     const [noEmpty, empty] = React.useState(false);
@@ -12,7 +13,8 @@ function TodoForm(props){
     const {
         addTodo,
         setOpenModal,
-        editTodo
+        editTodo,
+        todoText
     } = React.useContext(TodoContext);
 
     const onchange =(event) => {
@@ -21,6 +23,7 @@ function TodoForm(props){
 
     const onCancel = () => {
         setOpenModal(false);
+        console.log(todoText)
     }
     const addNewTodo = (event) => {
         if(!newTodoValue.trim().length){
@@ -33,6 +36,19 @@ function TodoForm(props){
             setOpenModal(false);
         }
     }
+    // const addNewTodoEnter = (event) => {
+    //     if(!newTodoValue.trim().length){
+    //         event.preventDefault();
+    //         empty(true);
+    //         setOpenModal(true);
+    //     }else{
+    //         if (event.key == 13) {
+    //             event.preventDefault();
+    //             addTodo(newTodoValue);
+    //             setOpenModal(false);
+    //         }
+    //     }
+    // }
 
     const editTodoNow = (event) => {
         if(!newTodoValue.trim().length){
@@ -45,7 +61,19 @@ function TodoForm(props){
             setOpenModal(false);
         }
     }
-
+    // const editTodoNowEnter = (event) => {
+    //     if(!newTodoValue.trim().length){
+    //         event.preventDefault();
+    //         empty(true);
+    //         setOpenModal(true);
+    //     }else{
+    //         if (event.key == 13) {
+    //             event.preventDefault();
+    //             editTodo(newTodoValue, props.id);
+    //             setOpenModal(false);
+    //         }
+    //     }
+    // }
     return(
         <form onSubmit={ props.action ===  'editTodo' ? editTodoNow : addNewTodo } name="form">
             <div className="container">
@@ -54,6 +82,7 @@ function TodoForm(props){
                     onChange={onchange}
                     placeholder="Do Homework, for school."
                     className="textAreaTodo"
+                    // onKeyDown={props.action == "editTodo" ? editTodoNowEnter : addNewTodoEnter}
                 />
                 {noEmpty && <p className="message">Please, enter your task!!</p>}
                 <div className='containerButtonModal'>

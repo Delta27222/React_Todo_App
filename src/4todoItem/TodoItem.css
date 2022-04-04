@@ -2,6 +2,9 @@
 .columna1 { grid-area: columna1; }
 .columna2 { grid-area: columna2; }
 .columna3 { grid-area: columna3; }
+#text_todo{
+    color: transparent;
+}
 
 .TodoItem{
     background-color: #242526;
@@ -19,7 +22,7 @@
 }
 .grid_container{
     display: grid;
-    grid-template-columns: auto 1fr auto auto;
+    grid-template-columns: auto 1fr 40px auto;
     align-items: center;
     gap: 10px;
 }
