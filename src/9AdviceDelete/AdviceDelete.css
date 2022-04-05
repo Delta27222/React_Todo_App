@@ -6,8 +6,7 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    padding: 0px 40px;
-    height: 250px;
+    padding: 0px 40px 20px 40px;
 }
 .circle_icon_trash{
     background: rgb(32,35,41,.8);
@@ -39,6 +38,7 @@
     justify-content: start;
     position: relative;
     left: 165px;
+    margin-bottom: 10px;
 }
 .container_buttons button:nth-child(1){
     display: block;
@@ -71,10 +71,6 @@
 
 
 @media (min-width : 300px) and (max-width: 375px){
-    .Form {
-        padding: 25px 40px 4px 40px;
-        height: 230px;
-    }
     .circle_icon_trash{
         width: 90px;
         height: 45px;
@@ -116,7 +112,6 @@
 @media (min-width : 375px) and (max-width: 425px){
     .Form {
         padding: 25px 40px 4px 40px;
-        height: 230px;
     }
     .circle_icon_trash{
         width: 100px;
@@ -154,10 +149,6 @@
     }
 }
 @media (min-width : 425px) and (max-width: 768px){
-    .Form {
-        padding: 25px 40px 4px 40px;
-        height: 230px;
-    }
     .circle_icon_trash{
         width: 100px;
         height: 50px;
@@ -195,10 +186,6 @@
 }
 
 @media (min-width : 768px) and (max-width: 1024px){
-    .Form {
-        padding: 25px 40px 4px 40px;
-        height: 230px;
-    }
     .circle_icon_trash{
         width: 120px;
         height: 60px;
@@ -236,10 +223,6 @@
 }
 
 @media (min-width : 1024px) {
-    .Form {
-        padding: 25px 40px 4px 40px;
-        height: 230px;
-    }
     .circle_icon_trash{
         width: 130px;
         height: 65px;
