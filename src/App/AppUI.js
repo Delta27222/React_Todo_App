@@ -1,12 +1,11 @@
 import React from "react";
 import { TodoContext } from "../TodoContext";
-import { TodoCounter } from "../1todoCounter";
-import { TodoSearch } from "../2todoSearch";
 import { TodoList } from "../3todoList";
 import { TodoItem } from "../4todoItem";
 import { TodoForm } from "../7todoForm";
 import { CreateTodoButton } from "../5createTodoButton";
 import { AdviceDelete } from "../9AdviceDelete";
+import { TodoHeader } from "../1_2_TodoHeader";
 
 // Aca llamamos al componente modal
 import { Modal } from '../6modal'
@@ -28,9 +27,12 @@ function AppUI (){
         deleteTodo,
         openModal,
         setOpenModal,
-        totalTodos,
         todoText,
         setTodoText,
+        totalTodos,
+        completedTodos,
+        searchValue,
+        setSearchValue
     } = React.useContext(TodoContext);
 
     const [action, setAction] = React.useState("");
@@ -40,13 +42,12 @@ function AppUI (){
     return(
         <React.Fragment>
 
-            <div className="todoCounterContainer">
-                <TodoCounter />
-            </div>
-
-            <div className="todoSearchContainer">
-                <TodoSearch />
-            </div>
+            <TodoHeader
+                totalTodos={totalTodos}
+                completedTodos={completedTodos}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+            />
 
             <div className="todoListContainer">
                 <TodoList>

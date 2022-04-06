@@ -74,11 +74,6 @@
 
 /* DESDE HASTA */
 @media (min-width : 320px) and (max-width: 1600PX) {
-  .todoCounterContainer,
-  .todoSearchContainer
-  {
-    width: 150%;
-  }
   .todoListContainer
   {
     width: 150%;
