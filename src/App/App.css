@@ -43,14 +43,6 @@
   }
 }
 
-.container_TodoList{
-  /* margin-top: 50px; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: 10px; */
-}
 .container_problems{
   display: flex;
   flex-direction: column;
@@ -87,10 +79,7 @@
     position: relative;
     /* top: 1px; */
   }
-  .container_TodoList{
-    width: 300px;
-  }
-  
+
 }
 
 @media (min-width : 375PX) and (max-width: 424px){
@@ -98,9 +87,6 @@
     width: 375px;
     position: relative;
     /* top: 1px; */
-  }
-  .container_TodoList{
-    width: 375px;
   }
 }
 
@@ -110,9 +96,6 @@
     position: relative;
     /* top: 1px; */
   }
-  .container_TodoList{
-    width: 425px;
-  }
 }
 
 @media (min-width : 550PX) and (max-width: 768px){
@@ -120,9 +103,6 @@
     width: 550px;
     position: relative;
     /* top: 1px; */
-  }
-  .container_TodoList{
-    width: 550px;
   }
 }
 
@@ -132,17 +112,11 @@
     position: relative;
     /* top: 1px; */
   }
-  .container_TodoList{
-    width: 769px;
-  }
 }
 @media (min-width: 820px) {
   .container_problems{
     width: 820px;
     position: relative;
     /* top: 1px; */
-  }
-  .container_TodoList{
-    width: 820px;
   }
 }

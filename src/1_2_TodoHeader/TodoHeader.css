@@ -1,0 +1,5 @@
+.todoSearchContainer,
+.todoCounterContainer{
+    display: flex;
+    justify-content: center;
+}
