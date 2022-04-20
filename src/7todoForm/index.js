@@ -1,21 +1,15 @@
 import React from "react";
-import { TodoContext } from '../TodoContext'
 import './TodoForm.css'
 
 
-function TodoForm(props){
+function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setTodoText }){
 
+    action={action}
 
     const [newTodoValue, setNewTodoValue] = React.useState("");
 
     const [noEmpty, empty] = React.useState(false);
 
-    const {
-        addTodo,
-        setOpenModal,
-        editTodo,
-        todoText
-    } = React.useContext(TodoContext);
 
     const onchange =(event) => {
         setNewTodoValue(event.target.value);
@@ -36,19 +30,6 @@ function TodoForm(props){
             setOpenModal(false);
         }
     }
-    // const addNewTodoEnter = (event) => {
-    //     if(!newTodoValue.trim().length){
-    //         event.preventDefault();
-    //         empty(true);
-    //         setOpenModal(true);
-    //     }else{
-    //         if (event.key == 13) {
-    //             event.preventDefault();
-    //             addTodo(newTodoValue);
-    //             setOpenModal(false);
-    //         }
-    //     }
-    // }
 
     const editTodoNow = (event) => {
         if(!newTodoValue.trim().length){
@@ -57,32 +38,20 @@ function TodoForm(props){
             setOpenModal(true);
         }else{
             event.preventDefault();
-            editTodo(newTodoValue, props.id);
+            editTodo(newTodoValue, id);
             setOpenModal(false);
         }
     }
-    // const editTodoNowEnter = (event) => {
-    //     if(!newTodoValue.trim().length){
-    //         event.preventDefault();
-    //         empty(true);
-    //         setOpenModal(true);
-    //     }else{
-    //         if (event.key == 13) {
-    //             event.preventDefault();
-    //             editTodo(newTodoValue, props.id);
-    //             setOpenModal(false);
-    //         }
-    //     }
-    // }
+    
     return(
-        <form onSubmit={ props.action ===  'editTodo' ? editTodoNow : addNewTodo } name="form">
+        <form onSubmit={ action ===  'editTodo' ? editTodoNow : addNewTodo } name="form">
             <div className="container">
                 <textarea
-                    defaultValue={props.action == "editTodo" ? props.todoText : ""}
+                    defaultValue={action == "editTodo" ? todoText : ""}
                     onChange={onchange}
                     placeholder="Do Homework, for school."
                     className="textAreaTodo"
-                    // onKeyDown={props.action == "editTodo" ? editTodoNowEnter : addNewTodoEnter}
+                    // onKeyDown={action == "editTodo" ? editTodoNowEnter : addNewTodoEnter}
                 />
                 {noEmpty && <p className="message">Please, enter your task!!</p>}
                 <div className='containerButtonModal'>
@@ -97,7 +66,7 @@ function TodoForm(props){
                         type="submit"
                         disabled={!newTodoValue.length}
                     >
-                        {props.action == "editTodo" ? "Save" : "Create"}
+                        {action == "editTodo" ? "Save" : "Create"}
                         </button>
                 </div>
             </div>

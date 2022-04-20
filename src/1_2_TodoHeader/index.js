@@ -3,12 +3,7 @@ import './TodoHeader.css';
 import { TodoCounter } from "../1todoCounter";
 import { TodoSearch } from "../2todoSearch";
 
-function TodoHeader({
-    totalTodos,
-    completedTodos,
-    searchValue,
-    setSearchValue
-    }){
+function TodoHeader({totalTodos, completedTodos, searchValue, setSearchValue }){
     return(
         <header>
             <div className="todoCounterContainer">

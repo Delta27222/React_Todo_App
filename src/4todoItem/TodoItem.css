@@ -15,10 +15,7 @@
     -webkit-box-shadow: -1px -1px 33px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px -1px 33px -6px rgba(0,0,0,0.75);
     box-shadow: -1px -1px 33px -6px rgba(0,0,0,0.75);
-    
-    width: 80%;
-    
-
+    width: 95%;
 }
 .grid_container{
     display: grid;
@@ -46,6 +43,8 @@
 .Icon_edit{
     cursor: pointer;
     transform: rotate(225deg);
+    position: relative;
+    left: 15px;
 }
 
 .Icon-delete {
@@ -97,8 +96,9 @@
 .Icon-delete {
     cursor: pointer;
     fill: #B0B3B8;
-    position: sticky;
-    bottom: 680px;
+    position: relative;
+    bottom: 38px;
+    left: 10px;
 }
 .Icon-delete:hover {
     fill: #e7c100;
