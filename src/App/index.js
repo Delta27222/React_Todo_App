@@ -53,7 +53,39 @@ function App() {
             />
 
             <div className="todoListContainer">
-                <TodoList>
+
+                <TodoList
+                    error={error}
+                    loading={loading}
+                    totalTodos={totalTodos}
+                    searchedTodos={searchedTodos}
+                    // Estas serian TODAS LAS RENDER PROPS QUE ESTARIA USANDO EN ESTE CASO
+                    onError={() =>  <TodosError error={error} />}
+                    onLoading={() => <TodosLoading />}
+                    onEmptyTodos={() =>  <EmptyTodos/> }
+
+                    onNonTodos={() => <NonTodos/>}
+                    onCreateNewTodo={() =>  <CreateNewTodo/>}
+
+                    render={todo => (
+                        <TodoItem
+                            key={todo.id}
+                            text={ todo.text}
+                            completed={todo.completed}
+                            id={todo.id}
+                            onComplete={() => completeTodo(todo.text, todo.completed)}
+                            onDelete={() => deleteTodo(todo.id)}
+                            setOpenModal={ setOpenModal }
+                            setAction = { setAction }
+                            action={action}
+                            setTodoText = { setTodoText }
+                            setId = { setId }
+                            numberOfTask = { numberOfTask }
+
+                        />
+                    )}
+                />
+                {/* <TodoList>
 
                     {!loading && (totalTodos === 0) && <NonTodos/>}
 
@@ -71,9 +103,9 @@ function App() {
                         .map((a, i) => <TodosLoading key={i}/>)
                     }
 
-                    </div>
-
-                     <div className="container_TodoList">    {/* ESTE DIV SE QUITA PARA QUE QUEDE CENTRADO EN PANTALLA */}
+                    </div> */}
+                        {/* ESTE DIV SE QUITA PARA QUE QUEDE CENTRADO EN PANTALLA */}
+                    {/* <div className="container_TodoList">
                         {searchedTodos.map(todo => (
                                 <TodoItem
                                     key={todo.id}
@@ -92,7 +124,7 @@ function App() {
                         ))}
                     </div>
 
-                </TodoList>
+                </TodoList> */}
             </div>
 
                 {!!openModal &&(
