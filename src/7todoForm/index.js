@@ -17,7 +17,6 @@ function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setT
 
     const onCancel = () => {
         setOpenModal(false);
-        console.log(todoText)
     }
     const addNewTodo = (event) => {
         if(!newTodoValue.trim().length){
@@ -44,10 +43,10 @@ function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setT
     }
     
     return(
-        <form onSubmit={ action ===  'editTodo' ? editTodoNow : addNewTodo } name="form">
+        <form onSubmit={ Object.values(action)[0] ===  'editTodo' ? editTodoNow : addNewTodo } name="form">
             <div className="container">
                 <textarea
-                    defaultValue={action == "editTodo" ? todoText : ""}
+                    defaultValue={Object.values(action)[0] === "editTodo" ? todoText : "No se esta actualizando "}
                     onChange={onchange}
                     placeholder="Do Homework, for school."
                     className="textAreaTodo"
@@ -66,7 +65,7 @@ function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setT
                         type="submit"
                         disabled={!newTodoValue.length}
                     >
-                        {action == "editTodo" ? "Save" : "Create"}
+                        {Object.values(action)[0] == "editTodo" ? "Save" : "Create"}
                         </button>
                 </div>
             </div>
