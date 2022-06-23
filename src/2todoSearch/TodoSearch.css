@@ -22,6 +22,10 @@
     outline-color: #000000;
 }
 
+.TodoSearch:disabled{
+    opacity: 25%;
+}
+
 .TodoSearch{
     height: 35px;
     width: 70%;

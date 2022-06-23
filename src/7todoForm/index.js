@@ -46,7 +46,7 @@ function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setT
         <form onSubmit={ Object.values(action)[0] ===  'editTodo' ? editTodoNow : addNewTodo } name="form">
             <div className="container">
                 <textarea
-                    defaultValue={Object.values(action)[0] === "editTodo" ? todoText : "No se esta actualizando "}
+                    defaultValue={Object.values(action)[0] === "editTodo" ? todoText : ""}
                     onChange={onchange}
                     placeholder="Do Homework, for school."
                     className="textAreaTodo"

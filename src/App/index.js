@@ -50,6 +50,7 @@ function App() {
                 completedTodos={completedTodos}
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
+                loading={loading}
             />
 
             <div className="todoListContainer">

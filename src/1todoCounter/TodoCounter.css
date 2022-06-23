@@ -3,6 +3,9 @@
     margin: 0px 2%;
     padding: 25px 5px 25px 5px;
 }
+.TodoCounter--loadign{
+    opacity: 25%;
+}
 /* desde */
 /* desde hasta */
 @media (min-width : 320px) and (max-width: 374px) {
