@@ -190,7 +190,7 @@ textarea::placeholder {
     }
 }
 
-@media (min-width : 1024px) and (max-width: 2400px){
+@media (min-width : 1024px) and (max-width: 2500px){
 
     textarea {
         font-size: 20px;
