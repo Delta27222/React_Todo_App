@@ -28,62 +28,60 @@
 }
 
 @media (min-width : 320px) and (max-width: 375px){
-    .container_error{
-        width: 45%;
-        height: 50px;
+    .container_error1{
+        width: 100%;
+        height: 80px;
     }
     .tittle1{
-        font-size: 10px;
+        font-size: 12px;
     }
     .img1{
-        width: 30px;
-
+        width: 50px;
     }
 }
 
 @media (min-width : 375px) and (max-width: 425px){
-    .container_error{
-        width: 50%;
+    .container_error1{
+        width: 95%;
         height: 100px;
     }
     .tittle1{
         font-size: 15px;
     }
     .img1{
-        width: 40px;
-
+        width: 60px;
     }
 }
 
 @media (min-width : 425px) and (max-width: 768px){
-    .container_error{
-        width: 60%;
-        height: 150px;
+    .container_error1{
+        width: 100%;
+        height: 130px;
     }
     .tittle1{
-        font-size: 20px;
+        font-size: 17px;
     }
     .img1{
-        width: 60px;
-
+        width: 70px;
     }
 }
 
 @media (min-width : 768px) and (max-width: 1024px){
-    .container_error{
-        width: 80%;
+    .container_error1{
+        width: 110%;
         height: 200px;
+        gap: 20px;
     }
     .tittle1{
         font-size: 25px;
     }
     .img1{
-        width: 80px;
+        width: 90px;
     }
 }
 
 @media (min-width : 1024px) and (max-width: 1600px){
-    .container_error{
+    .container_error1{
         width: 100%;
         height: 250px;
     }
