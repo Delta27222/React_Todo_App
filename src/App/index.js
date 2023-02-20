@@ -25,6 +25,7 @@ function App() {
         completeTodo,
         deleteTodo,
         openModal,
+        getKey,
 
         setTodoText,
         totalTodos,
@@ -56,6 +57,7 @@ function App() {
             <div className="todoListContainer">
 
                 <TodoList
+                    key={() => getKey()}
                     error={error}
                     loading={loading}
                     totalTodos={totalTodos}
@@ -86,46 +88,6 @@ function App() {
                         />
                     )}
                 />
-                {/* <TodoList>
-
-                    {!loading && (totalTodos === 0) && <NonTodos/>}
-
-                    {!loading && (totalTodos === 0) &&  <CreateNewTodo/>}
-
-                    {error && <TodosError error={error} />}
-
-                    {(!loading && !searchedTodos.length && (totalTodos !== 0)) && <EmptyTodos/> }
-
-                    <div className="container_problems">
-
-                    {loading &&
-                        Array(3)
-                        .fill(1)
-                        .map((a, i) => <TodosLoading key={i}/>)
-                    }
-
-                    </div> */}
-                        {/* ESTE DIV SE QUITA PARA QUE QUEDE CENTRADO EN PANTALLA */}
-                    {/* <div className="container_TodoList">
-                        {searchedTodos.map(todo => (
-                                <TodoItem
-                                    key={todo.id}
-                                    text={ todo.text}
-                                    completed={todo.completed}
-                                    id={todo.id}
-                                    onComplete={() => completeTodo(todo.text, todo.completed)}
-                                    onDelete={() => deleteTodo(todo.id)}
-                                    setOpenModal={ setOpenModal }
-                                    setAction = { setAction }
-                                    setTodoText = { setTodoText }
-                                    setId = { setId }
-                                    numberOfTask = { numberOfTask }
-
-                                />
-                        ))}
-                    </div>
-
-                </TodoList> */}
             </div>
 
                 {!!openModal &&(

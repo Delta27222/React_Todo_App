@@ -10,7 +10,7 @@
     "react-content-loader": "^6.2.0",
     "react-dom": "^17.0.2",
     "react-loading-skeleton": "^3.0.3",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,5 +43,4 @@
     "gh-pages": "^3.2.3"
   },
   "homepage": "https://Delta27222.github.io/React_Todo_App"
-
 }
