@@ -1,8 +1,7 @@
 import React from "react";
 import './TodoSearch.css';
 
-function TodoSearch ({ searchValue, setSearchValue, loading}) {
-
+function TodoSearch ({ searchValue, setSearchValue, loading, totalTodos}) {
 
     const onSearchValueChange = (event) => {
         console.log(event.target.value);
@@ -14,7 +13,7 @@ function TodoSearch ({ searchValue, setSearchValue, loading}) {
             placeholder="Search"
             value={searchValue}
             onChange={onSearchValueChange}
-            disabled={loading}
+            disabled={loading || totalTodos === 0}
         />
     );
 }

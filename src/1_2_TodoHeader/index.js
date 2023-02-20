@@ -19,6 +19,7 @@ function TodoHeader({totalTodos, completedTodos, searchValue, setSearchValue, lo
                     searchValue={searchValue}
                     setSearchValue={setSearchValue}
                     loading={loading}
+                    totalTodos={totalTodos}
                 />
             </div>
         </header>
