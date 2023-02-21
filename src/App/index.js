@@ -15,6 +15,9 @@ import { TodosError } from '../8loading skeletons/TodosError'
 import { TodosLoading } from '../8loading skeletons/TodosLoading'
 import { EmptyTodos } from '../8loading skeletons/EmptyTodos'
 import { NonTodos, CreateNewTodo } from '../8loading skeletons/NonTodos'
+import { ChatBot } from "../10ChatBot";
+import { Chat } from "../10ChatBot/Chat";
+import { ConectionProvider } from "../10ChatBot/Chat/conection_ChatGPT";
 
 function App() {
    // Aqui usaremos un nuevo HOOK
@@ -45,84 +48,93 @@ function App() {
 
     return(
         <React.Fragment>
-
-            <TodoHeader
-                totalTodos={totalTodos}
-                completedTodos={completedTodos}
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
-                loading={loading}
-            />
-
-            <div className="todoListContainer">
-
-                <TodoList
-                    key={() => getKey()}
-                    error={error}
-                    loading={loading}
+                <TodoHeader
                     totalTodos={totalTodos}
-                    searchedTodos={searchedTodos}
-                    // Estas serian TODAS LAS RENDER PROPS QUE ESTARIA USANDO EN ESTE CASO
-                    onError={() =>  <TodosError error={error} />}
-                    onLoading={() => <TodosLoading />}
-                    onEmptyTodos={() =>  <EmptyTodos/> }
-
-                    onNonTodos={() => <NonTodos/>}
-                    onCreateNewTodo={() =>  <CreateNewTodo/>}
-
-                    render={todo => (
-                        <TodoItem
-                            key={todo.id}
-                            text={ todo.text}
-                            completed={todo.completed}
-                            id={todo.id}
-                            onComplete={() => completeTodo(todo.text, todo.completed)}
-                            onDelete={() => deleteTodo(todo.id)}
-                            setOpenModal={ setOpenModal }
-                            setAction = { setAction }
-                            action={action}
-                            setTodoText = { setTodoText }
-                            setId = { setId }
-                            numberOfTask = { numberOfTask }
-
-                        />
-                    )}
+                    completedTodos={completedTodos}
+                    searchValue={searchValue}
+                    setSearchValue={setSearchValue}
+                    loading={loading}
                 />
-            </div>
 
-                {!!openModal &&(
+                <div className="todoListContainer">
 
-                    <Modal>
-                        { (action === 'createTodo' || action === 'editTodo') &&(
-                            <TodoForm
+                    <TodoList
+                        key={() => getKey()}
+                        error={error}
+                        loading={loading}
+                        totalTodos={totalTodos}
+                        searchedTodos={searchedTodos}
+                        // Estas serian TODAS LAS RENDER PROPS QUE ESTARIA USANDO EN ESTE CASO
+                        onError={() =>  <TodosError error={error} />}
+                        onLoading={() => <TodosLoading />}
+                        onEmptyTodos={() =>  <EmptyTodos/> }
+
+                        onNonTodos={() => <NonTodos/>}
+                        onCreateNewTodo={() =>  <CreateNewTodo/>}
+
+                        render={todo => (
+                            <TodoItem
+                                key={todo.id}
+                                text={ todo.text}
+                                completed={todo.completed}
+                                id={todo.id}
+                                onComplete={() => completeTodo(todo.text, todo.completed)}
+                                onDelete={() => deleteTodo(todo.id)}
+                                setOpenModal={ setOpenModal }
+                                setAction = { setAction }
                                 action={action}
-                                todoText={todoText}
                                 setTodoText = { setTodoText }
-                                id = { id }
-                                setOpenModal={setOpenModal}
-                                addTodo = { addTodo }
-                                editTodo = { editTodo}
+                                setId = { setId }
+                                numberOfTask = { numberOfTask }
+
                             />
                         )}
-                        { action === 'deleteTodo'&& (
-                            <AdviceDelete
-                                todoText = { todoText }
-                                setOpenModal={setOpenModal}
-                                id = { id }
-                                deleteTodo = { deleteTodo }
-                            />
-                        )}
+                    />
+                </div>
 
-                    </Modal>
+                    {!!openModal &&(
 
-                )}
+                        <Modal>
+                            { (action === 'createTodo' || action === 'editTodo') &&(
+                                <TodoForm
+                                    action={action}
+                                    todoText={todoText}
+                                    setTodoText = { setTodoText }
+                                    id = { id }
+                                    setOpenModal={setOpenModal}
+                                    addTodo = { addTodo }
+                                    editTodo = { editTodo}
+                                />
+                            )}
+                            { action === 'deleteTodo'&& (
+                                <AdviceDelete
+                                    todoText = { todoText }
+                                    setOpenModal={setOpenModal}
+                                    id = { id }
+                                    deleteTodo = { deleteTodo }
+                                />
+                            )}
+                            { action === 'chatBot'&& (
+                                <Chat
+                                    setOpenModal={setOpenModal}
+                                    action={action}
+                                />
+                            )}
+
+                        </Modal>
+
+                    )}
 
 
-            <CreateTodoButton
-                setOpenModal={setOpenModal}
-                setAction = { setAction }
-            />
+                <CreateTodoButton
+                    setOpenModal={setOpenModal}
+                    setAction = { setAction }
+                />
 
+                <ChatBot
+                    setOpenModal={setOpenModal}
+                    setAction = { setAction }
+                />
         </React.Fragment>
 
     );
