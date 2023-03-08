@@ -16,8 +16,6 @@ import { TodosLoading } from '../8loading skeletons/TodosLoading'
 import { EmptyTodos } from '../8loading skeletons/EmptyTodos'
 import { NonTodos, CreateNewTodo } from '../8loading skeletons/NonTodos'
 import { ChatBot } from "../10ChatBot";
-import { Chat } from "../10ChatBot/Chat";
-import { ConectionProvider } from "../10ChatBot/Chat/conection_ChatGPT";
 
 function App() {
    // Aqui usaremos un nuevo HOOK
@@ -114,13 +112,6 @@ function App() {
                                     deleteTodo = { deleteTodo }
                                 />
                             )}
-                            { action === 'chatBot'&& (
-                                <Chat
-                                    setOpenModal={setOpenModal}
-                                    action={action}
-                                />
-                            )}
-
                         </Modal>
 
                     )}
@@ -131,10 +122,8 @@ function App() {
                     setAction = { setAction }
                 />
 
-                <ChatBot
-                    setOpenModal={setOpenModal}
-                    setAction = { setAction }
-                />
+                {/* <ChatBot/> */}
+
         </React.Fragment>
 
     );

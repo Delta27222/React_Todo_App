@@ -25,6 +25,7 @@ function TodoItem({key, text, completed, id, setId, onComplete, onDelete, setOpe
   return (
     <li className="TodoItem grid_container">
         <img
+          alt='img'
           src={`${completed ? path1 : path2}`}
           className={`Icon-check ${completed && 'Icon-check--active icon'}`}
           onClick={onComplete}
@@ -36,6 +37,7 @@ function TodoItem({key, text, completed, id, setId, onComplete, onDelete, setOpe
           </p>
         </div>
         <img
+          alt='img1'
           className='Icon_edit'
           src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-pencil-home-improvement-flaticons-flat-flat-icons.png"
           onClick={showModalEdit}

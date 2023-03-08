@@ -3,15 +3,14 @@ import './ChatBot.css';
 import bot_img from '../10ChatBot/bot.png'
 
 
-function ChatBot({ setOpenModal,setAction }){
-    const onClickButton = () => {
-        setOpenModal(prevState => !prevState);
-        setAction('chatBot');
+function ChatBot(){
+    const handleClick = ()=>{
+        window.open('https://www.google.com.ar/', '_blank')
     }
     return(
         <>
-            <div className="tooltip">
-                <img className="img_bot" src={bot_img} alt="jooa" onClick={onClickButton}/>
+            <div className="tooltip" >
+                <img className="img_bot" src={bot_img} alt="jooa" onClick={handleClick} />
             </div>
         </>
     );

@@ -65,7 +65,7 @@ function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setT
                         type="submit"
                         disabled={!newTodoValue.length}
                     >
-                        {Object.values(action)[0] == "editTodo" ? "Save" : "Create"}
+                        {Object.values(action)[0] === "editTodo" ? "Save" : "Create"}
                         </button>
                 </div>
             </div>
