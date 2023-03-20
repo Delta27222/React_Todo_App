@@ -1,5 +1,6 @@
 import React from "react";
 import './TodoForm.css'
+import toast from 'react-hot-toast';
 
 
 function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setTodoText }){
@@ -27,6 +28,7 @@ function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setT
             event.preventDefault();
             addTodo(newTodoValue);
             setOpenModal(false);
+            toast.success( `The Task: "${newTodoValue}" was created`)
         }
     }
 
@@ -39,6 +41,7 @@ function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setT
             event.preventDefault();
             editTodo(newTodoValue, id);
             setOpenModal(false);
+            toast.success( `The Task: "${newTodoValue}" was edited`)
         }
     }
     
@@ -66,7 +69,7 @@ function TodoForm({ id, action, addTodo, setOpenModal, editTodo, todoText , setT
                         disabled={!newTodoValue.length}
                     >
                         {Object.values(action)[0] === "editTodo" ? "Save" : "Create"}
-                        </button>
+                    </button>
                 </div>
             </div>
         </form>

@@ -17,6 +17,9 @@ import { EmptyTodos } from '../8loading skeletons/EmptyTodos'
 import { NonTodos, CreateNewTodo } from '../8loading skeletons/NonTodos'
 import { ChatBot } from "../10ChatBot";
 
+//Toast
+import { Toaster } from 'react-hot-toast';
+
 function App() {
    // Aqui usaremos un nuevo HOOK
     const {
@@ -120,6 +123,11 @@ function App() {
                 <CreateTodoButton
                     setOpenModal={setOpenModal}
                     setAction = { setAction }
+                />
+
+                <Toaster
+                    position="top-center"
+                    toastOptions={{className: '',duration: 1500,}}
                 />
 
                 {/* <ChatBot/> */}

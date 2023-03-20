@@ -1,7 +1,5 @@
 import React from 'react';
-import './TodoItem.css';
-
-// Imagenes svg
+import './TodoItem.css';// Imagenes svg
 import { ReactComponent as DeleteIcon }  from "../assets/delete.svg";
 
 const path1 = 'https://img.icons8.com/external-febrian-hidayat-outline-color-febrian-hidayat/64/000000/external-check-ui-essential-febrian-hidayat-outline-color-febrian-hidayat.png'

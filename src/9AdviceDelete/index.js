@@ -1,5 +1,6 @@
 import React from "react";
 import './AdviceDelete.css';
+import toast from 'react-hot-toast';
 
 // Imagenes svg
 import { ReactComponent as Trash }  from "../assets/trash.svg";
@@ -12,6 +13,9 @@ function AdviceDelete({todoText, setOpenModal, id, deleteTodo}){
     const  onClickDelete = () => {
         deleteTodo(id);
         setOpenModal(false);
+        toast(`The task: "${todoText}" was removed successfully`, {
+            icon: '🗑️',
+          });
     }
     return(
         <div className="Form">
